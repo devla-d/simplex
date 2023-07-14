@@ -1,0 +1,402 @@
+{% extends "layouts/home.html" %}
+<!---->
+{% block title %} Testimonies{% endblock title %}<!---->
+{% block content %}
+<section class="container py-5 mb-2 mt-sm-2 my-md-4 my-lg-5 mt-5">
+  <!-- Breadcrumb -->
+
+  <div class="row pt-2 py-xl-3">
+    <div class="col-lg-3 col-md-4">
+      <h2
+        class="h1 text-center text-md-start mx-auto mx-md-0 pt-md-2"
+        style="max-width: 300px"
+      >
+        Don't just <br class="d-none d-md-inline" />take our word<br
+          class="d-none d-md-inline"
+        />
+        for it :
+      </h2>
+
+      <!-- Slider controls (Prev / next buttons) -->
+      <div
+        class="d-flex justify-content-center justify-content-md-start pb-4 mb-2 pt-2 pt-md-4 mt-md-5"
+      >
+        <button
+          type="button"
+          id="prev-testimonial"
+          class="btn btn-prev btn-icon btn-sm me-2"
+          tabindex="0"
+          aria-label="Previous slide"
+          aria-controls="swiper-wrapper-4fbe03e91b53c55e"
+        >
+          <i class="bx bx-chevron-left"></i>
+        </button>
+        <button
+          type="button"
+          id="next-testimonial"
+          class="btn btn-next btn-icon btn-sm ms-2"
+          tabindex="0"
+          aria-label="Next slide"
+          aria-controls="swiper-wrapper-4fbe03e91b53c55e"
+        >
+          <i class="bx bx-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="col-lg-9 col-md-8">
+      <div
+        class="swiper mx-n2 swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
+        data-swiper-options='{
+              "slidesPerView": 1,
+              "spaceBetween": 8,
+              "loop": true,
+              "navigation": {
+                "prevEl": "#prev-testimonial",
+                "nextEl": "#next-testimonial"
+              },
+              "breakpoints": {
+                "500": {
+                  "slidesPerView": 2
+                },
+                "1000": {
+                  "slidesPerView": 2
+                },
+                "1200": {
+                  "slidesPerView": 3
+                }
+              }
+            }'
+      >
+        <div
+          class="swiper-wrapper"
+          id="swiper-wrapper-4fbe03e91b53c55e"
+          aria-live="polite"
+          style="
+            transition-duration: 0ms;
+            transform: translate3d(-617px, 0px, 0px);
+          "
+        >
+          <div
+            class="swiper-slide h-auto pt-4 swiper-slide-duplicate swiper-slide-duplicate-next"
+            style="width: 300.5px; margin-right: 8px"
+            role="group"
+            aria-label="2 / 3"
+            data-swiper-slide-index="1"
+          >
+            <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+              <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                <span
+                  class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4"
+                >
+                  <i class="bx bxs-quote-left"></i>
+                </span>
+                <blockquote class="card-body pb-3 mb-0">
+                  <p class="mb-0">
+                    The platform is structured to be very simple to use while
+                    you trade everything from a wide range of crypto-assets to
+                    precious metals and 24/7 fractional shares.
+                  </p>
+                </blockquote>
+                <div class="card-footer border-0 text-nowrap pt-0">
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                </div>
+              </div>
+              <figcaption class="d-flex align-items-center ps-4 pt-4">
+                <img
+                  src="../dataminingsolutionltd.com/assets/uploads/content/3.jpg"
+                  width="48"
+                  class="rounded-circle"
+                  alt="Annette Black"
+                />
+                <div class="ps-3">
+                  <h6 class="fs-sm fw-semibold mb-0">Matt</h6>
+                  <span class="fs-xs text-muted">Investor</span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <div
+            class="swiper-slide h-auto pt-4 swiper-slide-duplicate swiper-slide-prev"
+            style="width: 300.5px; margin-right: 8px"
+            role="group"
+            aria-label="3 / 3"
+            data-swiper-slide-index="2"
+          >
+            <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+              <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                <span
+                  class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4"
+                >
+                  <i class="bx bxs-quote-left"></i>
+                </span>
+                <blockquote class="card-body pb-3 mb-0">
+                  <p class="mb-0">
+                    I have been a Tokeno Limited user for many years and have
+                    been very satisfied so far. Everything is super simple and
+                    clearly laid out. You can make your first purchase with just
+                    a few clicks.
+                  </p>
+                </blockquote>
+                <div class="card-footer border-0 text-nowrap pt-0">
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bx-star text-muted opacity-75"></i>
+                </div>
+              </div>
+              <figcaption class="d-flex align-items-center ps-4 pt-4">
+                <img
+                  src="../dataminingsolutionltd.com/assets/uploads/content/2.jpg"
+                  width="48"
+                  class="rounded-circle"
+                  alt="Jerome Bell"
+                />
+                <div class="ps-3">
+                  <h6 class="fs-sm fw-semibold mb-0">Stephen</h6>
+                  <span class="fs-xs text-muted">Investor </span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Item -->
+          <div
+            class="swiper-slide h-auto pt-4 swiper-slide-active"
+            style="width: 300.5px; margin-right: 8px"
+            role="group"
+            aria-label="1 / 3"
+            data-swiper-slide-index="0"
+          >
+            <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+              <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                <span
+                  class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4"
+                >
+                  <i class="bx bxs-quote-left"></i>
+                </span>
+                <blockquote class="card-body pb-3 mb-0">
+                  <p class="mb-0">
+                    Tokeno Limited is headquartered in Vienna and therefore has
+                    to comply with European regulators, which makes me even more
+                    inclined to invest my funds in cryptocurrencies and stocks
+                    on this platform.
+                  </p>
+                </blockquote>
+                <div class="card-footer border-0 text-nowrap pt-0">
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bx-star text-muted opacity-75"></i>
+                  <i class="bx bx-star text-muted opacity-75"></i>
+                </div>
+              </div>
+              <figcaption class="d-flex align-items-center ps-4 pt-4">
+                <img
+                  src="../dataminingsolutionltd.com/assets/uploads/content/1.jpg"
+                  width="48"
+                  class="rounded-circle"
+                  alt="Robert Fox"
+                />
+                <div class="ps-3">
+                  <h6 class="fs-sm fw-semibold mb-0">Samantha</h6>
+                  <span class="fs-xs text-muted">Client</span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Item -->
+          <div
+            class="swiper-slide h-auto pt-4 swiper-slide-next"
+            style="width: 300.5px; margin-right: 8px"
+            role="group"
+            aria-label="2 / 3"
+            data-swiper-slide-index="1"
+          >
+            <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+              <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                <span
+                  class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4"
+                >
+                  <i class="bx bxs-quote-left"></i>
+                </span>
+                <blockquote class="card-body pb-3 mb-0">
+                  <p class="mb-0">
+                    The platform is structured to be very simple to use while
+                    you trade everything from a wide range of crypto-assets to
+                    precious metals and 24/7 fractional shares.
+                  </p>
+                </blockquote>
+                <div class="card-footer border-0 text-nowrap pt-0">
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                </div>
+              </div>
+              <figcaption class="d-flex align-items-center ps-4 pt-4">
+                <img
+                  src="../dataminingsolutionltd.com/assets/uploads/content/3.jpg"
+                  width="48"
+                  class="rounded-circle"
+                  alt="Annette Black"
+                />
+                <div class="ps-3">
+                  <h6 class="fs-sm fw-semibold mb-0">Matt</h6>
+                  <span class="fs-xs text-muted">Investor</span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Item -->
+          <div
+            class="swiper-slide h-auto pt-4 swiper-slide-duplicate-prev"
+            style="width: 300.5px; margin-right: 8px"
+            role="group"
+            aria-label="3 / 3"
+            data-swiper-slide-index="2"
+          >
+            <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+              <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                <span
+                  class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4"
+                >
+                  <i class="bx bxs-quote-left"></i>
+                </span>
+                <blockquote class="card-body pb-3 mb-0">
+                  <p class="mb-0">
+                    I have been a Tokeno Limited user for many years and have
+                    been very satisfied so far. Everything is super simple and
+                    clearly laid out. You can make your first purchase with just
+                    a few clicks.
+                  </p>
+                </blockquote>
+                <div class="card-footer border-0 text-nowrap pt-0">
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bx-star text-muted opacity-75"></i>
+                </div>
+              </div>
+              <figcaption class="d-flex align-items-center ps-4 pt-4">
+                <img
+                  src="../dataminingsolutionltd.com/assets/uploads/content/2.jpg"
+                  width="48"
+                  class="rounded-circle"
+                  alt="Jerome Bell"
+                />
+                <div class="ps-3">
+                  <h6 class="fs-sm fw-semibold mb-0">Stephen</h6>
+                  <span class="fs-xs text-muted">Investor </span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div
+            class="swiper-slide h-auto pt-4 swiper-slide-duplicate swiper-slide-duplicate-active"
+            style="width: 300.5px; margin-right: 8px"
+            role="group"
+            aria-label="1 / 3"
+            data-swiper-slide-index="0"
+          >
+            <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+              <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                <span
+                  class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4"
+                >
+                  <i class="bx bxs-quote-left"></i>
+                </span>
+                <blockquote class="card-body pb-3 mb-0">
+                  <p class="mb-0">
+                    Tokeno Limited is headquartered in Vienna and therefore has
+                    to comply with European regulators, which makes me even more
+                    inclined to invest my funds in cryptocurrencies and stocks
+                    on this platform.
+                  </p>
+                </blockquote>
+                <div class="card-footer border-0 text-nowrap pt-0">
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bx-star text-muted opacity-75"></i>
+                  <i class="bx bx-star text-muted opacity-75"></i>
+                </div>
+              </div>
+              <figcaption class="d-flex align-items-center ps-4 pt-4">
+                <img
+                  src="../dataminingsolutionltd.com/assets/uploads/content/1.jpg"
+                  width="48"
+                  class="rounded-circle"
+                  alt="Robert Fox"
+                />
+                <div class="ps-3">
+                  <h6 class="fs-sm fw-semibold mb-0">Samantha</h6>
+                  <span class="fs-xs text-muted">Client</span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <div
+            class="swiper-slide h-auto pt-4 swiper-slide-duplicate swiper-slide-duplicate-next"
+            style="width: 300.5px; margin-right: 8px"
+            role="group"
+            aria-label="2 / 3"
+            data-swiper-slide-index="1"
+          >
+            <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+              <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                <span
+                  class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4"
+                >
+                  <i class="bx bxs-quote-left"></i>
+                </span>
+                <blockquote class="card-body pb-3 mb-0">
+                  <p class="mb-0">
+                    The platform is structured to be very simple to use while
+                    you trade everything from a wide range of crypto-assets to
+                    precious metals and 24/7 fractional shares.
+                  </p>
+                </blockquote>
+                <div class="card-footer border-0 text-nowrap pt-0">
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                  <i class="bx bxs-star text-warning"></i>
+                </div>
+              </div>
+              <figcaption class="d-flex align-items-center ps-4 pt-4">
+                <img
+                  src="../dataminingsolutionltd.com/assets/uploads/content/3.jpg"
+                  width="48"
+                  class="rounded-circle"
+                  alt="Annette Black"
+                />
+                <div class="ps-3">
+                  <h6 class="fs-sm fw-semibold mb-0">Matt</h6>
+                  <span class="fs-xs text-muted">Investor</span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <span
+          class="swiper-notification"
+          aria-live="assertive"
+          aria-atomic="true"
+        ></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %} {% endblock title %} | {{domain}}</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="The easiest way to invest in cryptocurrency No trading skills. One of the most obvious benefits of our investment is the potential for high returns. Unlike traditional investments like stocks or real estate, you don't need a lot of money to get started."
+    />
+    <meta
+      name="keywords"
+      content="tokeno, {{domain}}, forex company, tokeno forex company, {{domain}} forex company, trading company, tokeno trading company, {{domain}} trading company, trading firm, tokeno trading firm, {{domain}} trading firm, investment brokerage, tokeno investment brokerage, {{domain}} investment brokerage, {{domain}}, cryptocurrency investment, blockchain system, investment platform, cryptocurrency,   swap coins forex investment, invest in cryptocurrency, {{domain}}"
+    />
+    <meta name="author" content="{{domain}}" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:type" content="{{domain}}" />
+    <meta property="og:title" content="{{domain}}" />
+    <meta
+      property="og:description"
+      content="The easiest way to invest in cryptocurrency No trading skills. One of the most obvious benefits of our investment is the potential for high returns. Unlike traditional investments like stocks or real estate, you don't need a lot of money to get started."
+    />
+    <meta property="og:image" content="/assets/img/favicon.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="{{domain}}" />
+    <meta name="twitter:site" content="{{domain}}" />
+    <meta name="twitter:title" content="{{domain}}" />
+    <meta
+      name="twitter:description"
+      content="The easiest way to invest in cryptocurrency No trading skills. One of the most obvious benefits of our investment is the potential for high returns. Unlike traditional investments like stocks or real estate, you don't need a lot of money to get started."
+    />
+    <meta name="twitter:image" content="assets/img/favicon.png" />
+    <meta name="twitter:image:alt" content="{{domain}} Logo" />
+    <meta name="theme-color" content="#3e8c8c" />
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon and Touch Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/img/favicon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicon.png"
+    />
+    <link rel="manifest" href="/assets/favicon/site.html" />
+    <link
+      rel="mask-icon"
+      href="/assets/favicon/safari-pinned-tab.svg"
+      color="#3e8c8c"
+    />
+    <link rel="shortcut icon" href="/assets/img/favicon.png" />
+    <meta name="msapplication-TileColor" content="#3e8c8c" />
+    <meta name="msapplication-config" content="assets/img/favicon.png" />
+    <meta name="theme-color" content="#3e8c8c" />
+
+    <!-- Vendor Styles -->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="/assets/vendor/boxicons/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="/assets/vendor/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="/assets/vendor/lightgallery/css/lightgallery-bundle.min.css"
+    />
+    <link rel="preconnect" href="../fonts.googleapis.com/index.html" />
+    <link rel="preconnect" href="../fonts.gstatic.com/index.html" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="/assets/css/theme.min.css" />
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: 0.6;
+      }
+
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+
+      .dark-mode .page-spinner {
+        border-color: rgba(255, 255, 255, 0.4);
+        border-right-color: transparent;
+      }
+
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      * {
+        font-family: "Oxygen", sans-serif !important;
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem("mode"),
+        root = document.getElementsByTagName("html")[0];
+      if (mode !== null && mode === "dark") {
+        root.classList.add("dark-mode");
+      } else {
+        root.classList.remove("dark-mode");
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "www.googletagmanager.com/gtm54455445.html?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WKV3GT5");
+    </script>
+
+    <style>
+      .sticky-container {
+        padding: 0px;
+        margin: 0px;
+        position: fixed;
+        right: -95px;
+        top: 70px;
+        width: 170px;
+        z-index: 5;
+      }
+
+      .sticky li {
+        list-style-type: none;
+        background-color: white;
+        color: white;
+        height: auto;
+        padding: 0px;
+        margin: 0px 0px 5px 5px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+        cursor: pointer;
+      }
+
+      .sticky a {
+        font-size: 12px;
+      }
+
+      .sticky li:hover {
+        margin-left: -100px;
+      }
+
+      .sticky li img {
+        float: left;
+        margin: 5px 4px;
+        margin-right: 5px;
+      }
+
+      .sticky li p {
+        padding-top: 5px;
+        margin: 0px;
+        line-height: 16px;
+        font-size: 11px;
+        color: #000 !important;
+      }
+
+      .sticky li p a {
+        text-decoration: none;
+        color: #000 !important;
+      }
+
+      .sticky li p a:hover {
+        text-decoration: underline;
+      }
+    </style>
+
+    <style>
+      #goog-gt-tt,
+      .goog-te-balloon-frame {
+        display: none !important;
+      }
+
+      .goog-text-highlight {
+        background: none !important;
+        box-shadow: none !important;
+      }
+
+      .goog-te-banner-frame {
+        display: none !important;
+      }
+
+      .goog-logo-link {
+        display: none !important;
+      }
+
+      .goog-te-gadget {
+        color: transparent !important;
+      }
+
+      #google_translate_element select {
+        background-color: #f6edfd;
+        color: #383ffa;
+        border: none;
+        border-radius: 3px;
+        padding: 6px 8px;
+      }
+
+      #google_translate_element select {
+        background: #f6edfd;
+        color: gray;
+        border: none;
+        border-radius: 3px;
+        padding: 6px 8px;
+      }
+
+      .goog-logo-link {
+        display: none !important;
+      }
+
+      .goog-te-gadget {
+        color: transparent !important;
+      }
+
+      .goog-te-banner-frame {
+        display: block !important;
+      }
+
+      #goog-gt-tt,
+      .goog-te-balloon-frame {
+        display: none !important;
+      }
+
+      .goog-text-highlight {
+        background: none !important;
+        box-shadow: none !important;
+      }
+    </style>
+
+    {% block head %} {% endblock head %}
+  </head>
+
+  <!-- Body -->
+
+  <body>
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+      <!-- Google Tag Manager (noscript)-->
+      <noscript>
+        <iframe
+          src="http://www.googletagmanager.com/ns.html?id=GTM-WKV3GT5"
+          height="0"
+          width="0"
+          style="display: none; visibility: hidden"
+        ></iframe>
+      </noscript>
+
+      <!-- Page loading spinner -->
+      <div class="page-loading active">
+        <div class="page-loading-inner">
+          <div class="page-spinner"></div>
+          <span>Please wait...</span>
+        </div>
+      </div>
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header
+        class="header navbar navbar-expand-lg navbar-dark position-absolute navbar-sticky bg-dark"
+      >
+        <div class="container px-3">
+          <a href="/" class="navbar-brand pe-3">
+            <img src="/assets/img/logo.png" width="100" alt="" />
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end bg-dark">
+            <div class="offcanvas-header border-bottom border-light">
+              <h5 class="offcanvas-title text-white">Menu</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav me-auto mb-2 mb-lg-0"
+                style="font-weight: 300"
+              >
+                <li class="nav-item">
+                  <a href="/" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="{% url 'about' %}"
+                    class="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    >About</a
+                  >
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                      <a href="{% url 'about' %}" class="dropdown-item">Company</a>
+                    </li>
+                    <li>
+                      <a href="{% url 'testimonies' %}" class="dropdown-item"
+                        >Testimonies</a
+                      >
+                    </li>
+                    <li>
+                      <a href="{% url 'privacy' %}" class="dropdown-item"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li>
+                      <a href="{% url 'terms' %}" class="dropdown-item"
+                        >Terms and Condition</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a href="{% url 'plans' %}" class="nav-link">Investment Plan</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="{% url 'faq' %}" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-current="page"
+                    >My Wallet</a
+                  >
+                  <div class="dropdown-menu dropdown-menu-dark p-0">
+                    <div class="d-lg-flex">
+                      <div
+                        class="mega-dropdown-column bg-position-center bg-repeat-0 bg-size-cover rounded-3 rounded-end-0"
+                        style="
+                          background-image: url(/assets/img/e0e8fec4cb604f1d84b67b020958fc66.png);
+                          margin: -1px;
+                        "
+                      ></div>
+                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
+                        <ul class="list-unstyled mb-0">
+                          <li>
+                            <a
+                              href="{% url 'deposit_page' %}"
+                              class="dropdown-item"
+                              >Bitcoin (BTC)</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="{% url 'deposit_page' %}"
+                              class="dropdown-item"
+                              >Ethereum (ETH)</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="{% url 'deposit_page' %}"
+                              class="dropdown-item"
+                              >Usdt TRC20</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-current="page"
+                    >Quick Links</a
+                  >
+                  <div class="dropdown-menu dropdown-menu-dark p-0">
+                    <div class="d-lg-flex">
+                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
+                        <ul class="list-unstyled mb-0">
+                          <li>
+                            <a
+                              href="{% url 'investment' %}"
+                              class="dropdown-item"
+                              >Start Investment</a
+                            >
+                          </li>
+
+                          <li>
+                            <a
+                              href="{% url 'withdrawal' %}"
+                              class="dropdown-item"
+                              >Request Withdrawal</a
+                            >
+                          </li>
+                           
+                          
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <a href="{% url 'contact' %}" class="nav-link">Contact us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top border-light">
+              <a
+                href="/sign-up"
+                class="btn btn-primary w-100"
+                rel="noopener"
+              >
+                Start Investing
+              </a>
+            </div>
+          </div>
+          <div class="dark-mode pe-lg-1 ms-auto me-4">
+            <div
+              class="form-check form-switch mode-switch"
+              data-bs-toggle="mode"
+            >
+              <input type="checkbox" class="form-check-input" id="theme-mode" />
+              <label
+                class="form-check-label d-none d-sm-block"
+                for="theme-mode"
+              ></label>
+              <label
+                class="form-check-label d-none d-sm-block"
+                for="theme-mode"
+              ></label>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a
+            href="/sign-up"
+            class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
+            rel="noopener"
+          >
+            Start Investing
+          </a>
+        </div>
+      </header>
+
+      {% block content %}   {% endblock content %}
+
+       
+    </main>
+    <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+      <div class="container pt-lg-4">
+        <div class="row pb-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+              <img src="/assets/img/logo.png" width="100" alt="" />
+            </div>
+            <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">
+              The easiest way to invest in cryptocurrency No trading skills. One
+              of the most obvious benefits of our investment is the potential
+              for high returns. Unlike traditional investments like stocks or
+              real estate, you don't need a lot of money to get started.
+            </p>
+          </div>
+          <div
+            class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0"
+          >
+            <div id="footer-links" class="row">
+              <div class="col-lg-4">
+                <h6 class="mb-2">
+                  <a
+                    href="#useful-links"
+                    class="d-block text-dark dropdown-toggle d-lg-none py-2 collapsed"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    >Useful Links</a
+                  >
+                </h6>
+                <div
+                  id="useful-links"
+                  class="d-lg-block collapse"
+                  data-bs-parent="#footer-links"
+                 
+                >
+                  <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                    <li class="nav-item">
+                      <a
+                        href="/"
+                        class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="{% url 'about' %}"
+                        class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >About</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="{% url 'faq' %}"
+                        class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >FAQ</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="{% url 'testimonies' %}"
+                        class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >Testimonies</a
+                      >
+                    </li>
+                  </ul>
+                  <ul class="nav flex-column mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a
+                        href="{% url 'terms' %}"
+                        class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >Terms &amp; Conditions</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="{% url 'privacy' %}"
+                        class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-3">
+                <h6 class="mb-2">
+                  <a
+                    href="#social-links"
+                    class="d-block text-dark dropdown-toggle d-lg-none py-2 collapsed"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    >Quick Links</a
+                  >
+                </h6>
+                <div
+                  id="social-links"
+                  class="d-lg-block collapse"
+                  data-bs-parent="#footer-links"
+                  style=""
+                >
+                  <ul class="nav flex-column mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a
+                        href="{% url 'deposit_page' %}"
+                        class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >Deposit</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="{% url 'withdrawal' %}"
+                        class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >Request Withdrawal</a
+                      >
+                    </li>
+                   
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <h6 class="mb-2">Contact Us</h6>
+                <a href="mailto:info@tokenoltd.com" class="fw-medium"
+                  >info@tokenoltd.com</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <p
+          class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0"
+        >
+          <span class="text-light opacity-50"
+            >2023 © All rights reserved. {{domain}}
+          </span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- GetButton.io widget -->
+    <script type="text/javascript">
+      (function () {
+        var options = {
+          whatsapp: "+1(775) 583-7576", // WhatsApp number
+          call_to_action: "Message us", // Call to action
+          button_color: "#FF6550", // Color of button
+          position: "left", // Position may be 'right' or 'left'
+        };
+        var proto = "index.html",
+          host = "getbutton.io",
+          url = proto + "//static." + host;
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = url + "/widget-send-button/js/init.js";
+        s.onload = function () {
+          WhWidgetSendButton.init(host, proto, options);
+        };
+        var x = document.getElementsByTagName("script")[0];
+        x.parentNode.insertBefore(s, x);
+      })();
+    </script>
+    <!-- /GetButton.io widget -->
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/assets/vendor/parallax-js/dist/parallax.min.js"></script>
+    <script src="/assets/vendor/rellax/rellax.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="/assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="/assets/js/theme.min.js"></script>
+
+    <div class="sticky-container">
+      <ul class="sticky">
+        <li style="height: 43px">
+          <img
+            style="border-radius: 50%"
+            src="/assets/img/English-icon.png"
+            width="32"
+            height="32"
+          />
+                <p>  <div id="google_translate_element"></div></p>
+          
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+
+            autoDisplay: "true",
+
+            includedLanguages:
+              "en,ab,af,an,ar,as,az,be,bg,bn,bo,br,bs,ca,ce,co,cs,cu,cy,da,de,el,eo,es,et,eu,fa,fi,fj,fo,fr,fy,ga,gd,gl,gv,he,hi,hr,ht,hu,hy,id,is,it,ja,jv,ka,kg,ko,ku,kw,ky,la,lb,li,ln,lt,lv,mg,mk,mn,mo,ms,mt,my,nb,ne,nl,nn,no,oc,pl,pt,rm,ro,ru,sc,se,sk,sl,so,sq,sr,sv,sw,tk,tr,ty,uk,ur,uz,vi,vo,yi,zh-hans,th",
+
+            // layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+
+    {% block script %} {% endblock script %}
+  </body>
+</html>
