@@ -137,7 +137,7 @@ USE_TZ = True
 
 STATIC_URL = "assets/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "assets"),)
-STATIC_ROOT = "/home/simplext/public_html/assets"
+STATIC_ROOT = "/home4/simplext/public_html/assets"
 
 MEDIA_URL = "/media/"
 
