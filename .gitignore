@@ -5,7 +5,9 @@ __pycache__/
 local_settings.py
 db.sqlite3
 media
-migrations
+migrations/
+
+.vscode
 .env
 .venv
 env/
@@ -14,3 +16,6 @@ ENV/
 env.bak/
 venv.bak/
 tmp/
+public/
+stderr.log
+backup-assets/
