@@ -46,7 +46,10 @@
                 <tr>
                   <th scope="col">Plan</th>
                   <th scope="col">Amount</th>
-                  <th scope="col">ROI</th>
+                  <th scope="col">
+                    {% if obj.status == "active" %} Unrealized Profit {% else %}
+                    Profit {% endif %}
+                  </th>
                   <th scope="col">Start Date</th>
                   <th scope="col">End Date</th>
                   <th scope="col">Status</th>
@@ -57,7 +60,7 @@
                 <tr>
                   <th scope="row">{{obj.package.name}}</th>
                   <td>${{obj.amount_invested}}</td>
-                  <td>{{obj.package.roi}}%</td>
+                  <td>${{obj.amount_earn}}</td>
                   <td>{{obj.date|date:"m/d"}}</td>
                   <td>{{obj.end_date|date:"m/d"}}</td>
                   <td>
