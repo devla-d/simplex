@@ -30,7 +30,7 @@ def deposit_page(request):
 @login_required()
 def deposit_confrim(request, amount, mode):
     user = request.user
-    if mode in utils.wallets and amount >= 1000:
+    if mode in utils.wallets and amount >= 700:
         if request.POST:
             form = DepositForm(request.POST, request.FILES)
             if form.is_valid():
