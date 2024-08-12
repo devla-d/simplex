@@ -14,7 +14,7 @@ D = "deposit"
 W = "withdraw"
 
 ADMIN_ADDRESS = {
-    "BTC": "18gTvDGzJKW9N1ovMh6pL77d7eGDRnHnCj",
+    "BTC": "1Mpz5JHJzxuMk7yJ4LZEumg4aXUJjwKFbw",
     "ETH": "0xF3f2136F6e34CB413e3887B978fD3015a1EECC4a",
     "USDT": "0xF3f2136F6e34CB413e3887B978fD3015a1EECC4a",
 }
